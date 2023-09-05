@@ -1,0 +1,25 @@
+auto build
+
+git checkout son
+git pull
+git checkout dev
+git merge son
+git add .
+git commit -m "Merge huy"
+git push
+npm run build
+
+
+rm -rf ../santhuocviet_user_build/*
+mv ./build/* ../santhuocviet_user_build/
+cd ../santhuocviet_user_build 
+git add .
+git commit -m "New"
+git push -f
+cd ../santhuocviet_user_web
+
+cd /www/wwwroot/isempai.net
+git pull
+
+cd /www/wwwroot/myiki.vn
+git pull
